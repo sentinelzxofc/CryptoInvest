@@ -103,7 +103,7 @@ crypto-invest/
 
 5. **Acesse o site**
 
-[acessa o site aqui](https://sentinelzxofc.github.io)
+[acessa o site aqui](https://sentinelzxofc.github.io/CryptoInvest/)
 
 ## Compatibilidade
 
