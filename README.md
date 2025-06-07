@@ -1,6 +1,6 @@
 # CryptoInvest - Plataforma de Criptomoedas e Investimentos
 
-[CryptoInvest Logo](img/logo.svg)
+[CryptoInvest Logo](/img/logo.svg)
 
 ## Sobre o Projeto
 
