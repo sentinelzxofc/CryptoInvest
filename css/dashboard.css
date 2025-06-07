@@ -1,0 +1,591 @@
+@import url('variables.css');
+
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.dashboard-sidebar {
+    width: 280px;
+    background-color: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    padding: var(--space-6);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: var(--z-20);
+    transition: transform var(--transition-normal);
+}
+
+.dashboard-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: var(--space-8);
+    background-color: var(--bg-secondary);
+    min-height: calc(100vh - 70px);
+}
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    padding-bottom: var(--space-6);
+    margin-bottom: var(--space-6);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--text-lg);
+    margin-right: var(--space-4);
+}
+
+.sidebar-user-info {
+    flex: 1;
+}
+
+.sidebar-user-name {
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+}
+
+.sidebar-user-email {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+}
+
+.sidebar-nav {
+    margin-bottom: var(--space-6);
+}
+
+.sidebar-nav-title {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sidebar-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.sidebar-nav-item {
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.sidebar-nav-link:hover {
+    background-color: var(--bg-secondary);
+    color: var(--color-primary);
+}
+
+.sidebar-nav-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.sidebar-nav-icon {
+    margin-right: var(--space-3);
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-footer-link {
+    display: flex;
+    align-items: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.sidebar-footer-link:hover {
+    background-color: var(--bg-secondary);
+    color: var(--color-danger);
+}
+
+.sidebar-footer-icon {
+    margin-right: var(--space-3);
+    width: 20px;
+    text-align: center;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-8);
+}
+
+.dashboard-title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.dashboard-toggle-sidebar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.dashboard-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.overview-card {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-6);
+}
+
+.overview-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.overview-card-title {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+}
+
+.overview-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+}
+
+.overview-card-value {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.overview-card-change {
+    display: flex;
+    align-items: center;
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.overview-card-change.positive {
+    color: var(--color-success);
+}
+
+.overview-card-change.negative {
+    color: var(--color-danger);
+}
+
+.overview-card-change i {
+    margin-right: var(--space-1);
+}
+
+.portfolio-section {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.portfolio-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+}
+
+.portfolio-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.portfolio-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.portfolio-table th {
+    text-align: left;
+    padding: var(--space-4);
+    background-color: var(--bg-secondary);
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.portfolio-table th:first-child {
+    border-top-left-radius: var(--radius-md);
+}
+
+.portfolio-table th:last-child {
+    border-top-right-radius: var(--radius-md);
+}
+
+.portfolio-table td {
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.portfolio-table tr:last-child td:first-child {
+    border-bottom-left-radius: var(--radius-md);
+}
+
+.portfolio-table tr:last-child td:last-child {
+    border-bottom-right-radius: var(--radius-md);
+}
+
+.portfolio-table tr:hover {
+    background-color: var(--bg-secondary);
+}
+
+.asset-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.asset-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.asset-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.asset-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.asset-name {
+    font-weight: 600;
+}
+
+.asset-symbol {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+}
+
+.asset-amount {
+    font-family: var(--font-mono);
+}
+
+.asset-value {
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+.asset-change {
+    font-weight: 500;
+}
+
+.asset-change.positive {
+    color: var(--color-success);
+}
+
+.asset-change.negative {
+    color: var(--color-danger);
+}
+
+.asset-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.chart-section {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.chart-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+}
+
+.chart-period {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.chart-period-btn {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.chart-period-btn:hover, .chart-period-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.chart-container {
+    height: 300px;
+    width: 100%;
+}
+
+.transactions-section {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-6);
+}
+
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.transactions-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+}
+
+.transactions-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.transactions-table th {
+    text-align: left;
+    padding: var(--space-4);
+    background-color: var(--bg-secondary);
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transactions-table th:first-child {
+    border-top-left-radius: var(--radius-md);
+}
+
+.transactions-table th:last-child {
+    border-top-right-radius: var(--radius-md);
+}
+
+.transactions-table td {
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transactions-table tr:last-child td:first-child {
+    border-bottom-left-radius: var(--radius-md);
+}
+
+.transactions-table tr:last-child td:last-child {
+    border-bottom-right-radius: var(--radius-md);
+}
+
+.transactions-table tr:hover {
+    background-color: var(--bg-secondary);
+}
+
+.transaction-type {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.transaction-type.buy {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+}
+
+.transaction-type.sell {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--color-danger);
+}
+
+.transaction-asset {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.transaction-asset-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-asset-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+.transaction-amount {
+    font-family: var(--font-mono);
+}
+
+.transaction-value {
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+.transaction-date {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+}
+
+.transaction-status {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.transaction-status.completed {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+}
+
+.transaction-status.pending {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--color-warning);
+}
+
+.transaction-status.failed {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--color-danger);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-toggle-sidebar {
+        display: flex;
+    }
+    
+    .dashboard-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .dashboard-sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .dashboard-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-table th:nth-child(3),
+    .portfolio-table td:nth-child(3),
+    .portfolio-table th:nth-child(4),
+    .portfolio-table td:nth-child(4) {
+        display: none;
+    }
+    
+    .transactions-table th:nth-child(3),
+    .transactions-table td:nth-child(3),
+    .transactions-table th:nth-child(4),
+    .transactions-table td:nth-child(4) {
+        display: none;
+    }
+}
+

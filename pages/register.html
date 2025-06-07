@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | CryptoInvest</title>
+    <meta name="description" content="Crie sua conta na CryptoInvest e comece a investir em criptomoedas de forma segura e inteligente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.svg" alt="CryptoInvest Logo">
+                <span>CryptoInvest</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="market.html" class="nav-link">Mercado</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="register.html" class="btn btn-primary active">Cadastre-se</a>
+                </div>
+                
+                <button class="theme-toggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <div class="auth-logo">
+                        <img src="../img/logo.svg" alt="CryptoInvest Logo">
+                        <span>CryptoInvest</span>
+                    </div>
+                    <h1 class="auth-title">Crie sua conta</h1>
+                    <p class="auth-subtitle">Comece a investir em criptomoedas hoje mesmo</p>
+                </div>
+                
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName" class="form-label">Nome completo</label>
+                        <input type="text" id="registerName" class="form-input" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerEmail" class="form-label">Email</label>
+                        <input type="email" id="registerEmail" class="form-input" placeholder="seu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerPassword" class="form-label">Senha</label>
+                        <div class="password-toggle">
+                            <input type="password" id="registerPassword" class="form-input" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="password-strength-bar">
+                                <div class="password-strength-bar-inner"></div>
+                            </div>
+                            <div class="password-strength-text">Insira uma senha</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerConfirmPassword" class="form-label">Confirmar senha</label>
+                        <div class="password-toggle">
+                            <input type="password" id="registerConfirmPassword" class="form-input" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="registerTerms" class="form-check-input" required>
+                            <label for="registerTerms" class="form-check-label">
+                                Eu concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Criar Conta</button>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>ou continue com</span>
+                </div>
+                
+                <div class="auth-social">
+                    <button type="button" class="auth-social-btn">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                    <button type="button" class="auth-social-btn">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </button>
+                </div>
+                
+                <div class="auth-footer">
+                    <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about-col">
+                    <div class="footer-logo">
+                        <img src="../img/logo-white.svg" alt="CryptoInvest Logo">
+                        <span>CryptoInvest</span>
+                    </div>
+                    <p class="footer-about">A CryptoInvest é uma plataforma completa para investimentos em criptomoedas, oferecendo as melhores ferramentas e recursos para investidores iniciantes e experientes.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="market.html" class="footer-link">Mercado</a></li>
+                        <li><a href="about.html" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="contact.html" class="footer-link">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Academia</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Suporte</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Termos de Uso</a></li>
+                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Segurança</a></li>
+                        <li><a href="#" class="footer-link">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CryptoInvest. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/form-validation.js"></script>
+</body>
+</html>
+

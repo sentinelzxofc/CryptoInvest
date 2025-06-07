@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Criptomoeda | CryptoInvest</title>
+    <meta name="description" content="Informações detalhadas sobre criptomoedas, incluindo preço, histórico, gráficos e análises.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/coin-details.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.svg" alt="CryptoInvest Logo">
+                <span>CryptoInvest</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="market.html" class="nav-link active">Mercado</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="register.html" class="btn btn-primary">Cadastre-se</a>
+                </div>
+                
+                <button class="theme-toggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="coin-header">
+            <div class="container">
+                <div class="coin-header-content">
+                    <div class="coin-header-icon">
+                        <img id="coinIcon" src="../img/coins/bitcoin.svg" alt="Bitcoin">
+                    </div>
+                    <div class="coin-header-info">
+                        <h1 class="coin-header-name" id="coinName">Bitcoin</h1>
+                        <div class="coin-header-symbol" id="coinSymbol">BTC</div>
+                    </div>
+                    <div class="coin-header-price">
+                        <div class="coin-current-price" id="coinPrice">$42,850.75</div>
+                        <div class="coin-price-change positive" id="coinChange">
+                            <i class="fas fa-caret-up"></i> 2.4%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coin-content">
+            <div class="container">
+                <div class="coin-chart-container">
+                    <div class="coin-chart-header">
+                        <div class="coin-chart-title">Gráfico de Preço</div>
+                        <div class="coin-chart-period">
+                            <button class="coin-chart-period-btn active">24h</button>
+                            <button class="coin-chart-period-btn">7D</button>
+                            <button class="coin-chart-period-btn">30D</button>
+                            <button class="coin-chart-period-btn">90D</button>
+                            <button class="coin-chart-period-btn">1A</button>
+                            <button class="coin-chart-period-btn">Tudo</button>
+                        </div>
+                    </div>
+                    <canvas id="coinChart" class="coin-chart"></canvas>
+                </div>
+                
+                <div class="coin-info-grid">
+                    <div class="coin-info-card">
+                        <div class="coin-info-title">
+                            <i class="fas fa-chart-pie"></i>
+                            Estatísticas de Mercado
+                        </div>
+                        <div class="coin-info-item">
+                            <div class="coin-info-label">Capitalização de Mercado</div>
+                            <div class="coin-info-value" id="marketCap">$825,000,000,000</div>
+                        </div>
+                        <div class="coin-info-item">
+                            <div class="coin-info-label">Volume 24h</div>
+                            <div class="coin-info-value" id="volume24h">$28,500,000,000</div>
+                        </div>
+                        <div class="coin-info-item">
+                            <div class="coin-info-label">Fornecimento Circulante</div>
+                            <div class="coin-info-value" id="circulatingSupply">19,250,000</div>
+                        </div>
+                        <div class="coin-info-item">
+                            <div class="coin-info-label">Fornecimento Máximo</div>
+                            <div class="coin-info-value" id="maxSupply">21,000,000</div>
+                        </div>
+                    </div>
+                    
+                    <div class="coin-info-card">
+                        <div class="coin-info-title">
+                            <i class="fas fa-trophy"></i>
+                            Recordes de Preço
+                        </div>
+                        <div class="coin-info-item">
+                            <div class="coin-info-label">Máxima Histórica</div>
+                            <div class="coin-info-value" id="allTimeHigh">$69,000.00</div>
+                        </div>
+                        <div class="coin-info-item">
+                            <div class="coin-info-label">Mínima Histórica</div>
+                            <div class="coin-info-value" id="allTimeLow">$67.81</div>
+                        </div>
+                        <div class="coin-info-item">
+                            <div class="coin-info-label">Data de Lançamento</div>
+                            <div class="coin-info-value" id="launchDate">03/01/2009</div>
+                        </div>
+                    </div>
+                    
+                    <div class="coin-info-card">
+                        <div class="coin-info-title">
+                            <i class="fas fa-link"></i>
+                            Links Oficiais
+                        </div>
+                        <div class="coin-links">
+                            <a href="#" id="websiteLink" class="coin-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Website
+                            </a>
+                            <a href="#" id="explorerLink" class="coin-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-search"></i> Explorer
+                            </a>
+                            <a href="#" id="whitepaperLink" class="coin-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-alt"></i> Whitepaper
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coin-description">
+                    <h2 class="coin-description-title">Sobre Bitcoin</h2>
+                    <div class="coin-description-content" id="descriptionContent">
+                        <p>Bitcoin é a primeira criptomoeda descentralizada do mundo, criada em 2009 por uma pessoa ou grupo de pessoas usando o pseudônimo Satoshi Nakamoto. É uma moeda digital inovadora que permite pagamentos peer-to-peer sem a necessidade de intermediários como bancos ou governos.</p>
+                        <p>O Bitcoin utiliza tecnologia blockchain para registrar todas as transações em um livro-razão público e distribuído, garantindo segurança e transparência. Com um fornecimento limitado de 21 milhões de moedas, o Bitcoin é frequentemente considerado como "ouro digital" e uma reserva de valor contra a inflação.</p>
+                    </div>
+                </div>
+                
+                <div class="coin-history">
+                    <h2 class="coin-history-title">Histórico de Preços</h2>
+                    <table class="coin-history-table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Preço</th>
+                                <th>Variação</th>
+                                <th>Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <!-- Conteúdo gerado dinamicamente via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="coin-action">
+                    <h2 class="coin-action-title">Pronto para investir em Bitcoin?</h2>
+                    <p class="coin-action-description">Comece a investir agora e aproveite as oportunidades do mercado de criptomoedas com a CryptoInvest.</p>
+                    <div class="coin-action-buttons">
+                        <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="buyModal">Comprar Bitcoin</button>
+                        <a href="register.html" class="btn btn-lg btn-secondary">Criar Conta</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Comprar <span id="modalCoinName">Bitcoin</span></h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Preço atual: <span id="modalCoinPrice">$42,000.00</span></p>
+                <form id="buyForm">
+                    <div class="form-group">
+                        <label for="buyAmount" class="form-label">Quantidade</label>
+                        <input type="number" id="buyAmount" class="form-input" min="0.00001" step="0.00001" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buyTotal" class="form-label">Total estimado</label>
+                        <input type="text" id="buyTotal" class="form-input" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Comprar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about-col">
+                    <div class="footer-logo">
+                        <img src="../img/logo-white.svg" alt="CryptoInvest Logo">
+                        <span>CryptoInvest</span>
+                    </div>
+                    <p class="footer-about">A CryptoInvest é uma plataforma completa para investimentos em criptomoedas, oferecendo as melhores ferramentas e recursos para investidores iniciantes e experientes.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="market.html" class="footer-link">Mercado</a></li>
+                        <li><a href="about.html" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="contact.html" class="footer-link">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Academia</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Suporte</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Termos de Uso</a></li>
+                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Segurança</a></li>
+                        <li><a href="#" class="footer-link">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CryptoInvest. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/coin-details.js"></script>
+</body>
+</html>
+

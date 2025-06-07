@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado de Criptomoedas | CryptoInvest</title>
+    <meta name="description" content="Explore o mercado de criptomoedas em tempo real. Acompanhe preços, variações e tendências das principais moedas digitais.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/market.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.svg" alt="CryptoInvest Logo">
+                <span>CryptoInvest</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="market.html" class="nav-link active">Mercado</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="register.html" class="btn btn-primary">Cadastre-se</a>
+                </div>
+                
+                <button class="theme-toggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="market-header">
+            <div class="container">
+                <div class="market-header-content">
+                    <h1 class="market-title">Mercado de Criptomoedas</h1>
+                    <p class="market-subtitle">Explore e acompanhe as principais criptomoedas do mercado em tempo real.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="market-content">
+            <div class="container">
+                <div class="market-stats">
+                    <div class="market-stat-card">
+                        <div class="market-stat-title">Capitalização Total</div>
+                        <div class="market-stat-value">$1.85T</div>
+                        <div class="market-stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 3.2% (24h)
+                        </div>
+                    </div>
+                    
+                    <div class="market-stat-card">
+                        <div class="market-stat-title">Volume 24h</div>
+                        <div class="market-stat-value">$92.4B</div>
+                        <div class="market-stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 5.7% (24h)
+                        </div>
+                    </div>
+                    
+                    <div class="market-stat-card">
+                        <div class="market-stat-title">Dominância BTC</div>
+                        <div class="market-stat-value">42.3%</div>
+                        <div class="market-stat-change negative">
+                            <i class="fas fa-arrow-down"></i> 0.5% (24h)
+                        </div>
+                    </div>
+                    
+                    <div class="market-stat-card">
+                        <div class="market-stat-title">Moedas Ativas</div>
+                        <div class="market-stat-value">12,482</div>
+                        <div class="market-stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 24 (24h)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="market-filters">
+                    <div class="filters-row">
+                        <div class="search-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="searchInput" class="search-input" placeholder="Buscar criptomoeda...">
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="categoryFilter" class="filter-label">Categoria</label>
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="all">Todas</option>
+                                <option value="Smart Contract">Smart Contract</option>
+                                <option value="Currency">Moeda</option>
+                                <option value="DeFi">DeFi</option>
+                                <option value="Exchange">Exchange</option>
+                                <option value="NFT">NFT</option>
+                                <option value="Layer 2">Layer 2</option>
+                                <option value="Storage">Armazenamento</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="sortFilter" class="filter-label">Ordenar por</label>
+                            <select id="sortFilter" class="filter-select">
+                                <option value="market_cap">Capitalização</option>
+                                <option value="price_high">Preço (maior)</option>
+                                <option value="price_low">Preço (menor)</option>
+                                <option value="change_high">Variação (maior)</option>
+                                <option value="change_low">Variação (menor)</option>
+                                <option value="volume">Volume</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="market-table-container">
+                    <table class="market-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Preço</th>
+                                <th>Variação 24h</th>
+                                <th>Volume 24h</th>
+                                <th>Cap. de Mercado</th>
+                                <th>Categoria</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cryptoTableBody">
+                            <!-- Conteúdo gerado dinamicamente via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="pagination-arrow pagination-prev disabled">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" class="pagination-item active">1</a>
+                    <a href="#" class="pagination-item">2</a>
+                    <a href="#" class="pagination-item">3</a>
+                    <a href="#" class="pagination-item">4</a>
+                    <a href="#" class="pagination-item">5</a>
+                    <a href="#" class="pagination-arrow pagination-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Comprar <span id="modalCoinName">Bitcoin</span></h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Preço atual: <span id="modalCoinPrice">$42,000.00</span></p>
+                <form id="buyForm">
+                    <div class="form-group">
+                        <label for="buyAmount" class="form-label">Quantidade</label>
+                        <input type="number" id="buyAmount" class="form-input" min="0.00001" step="0.00001" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buyTotal" class="form-label">Total estimado</label>
+                        <input type="text" id="buyTotal" class="form-input" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Comprar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about-col">
+                    <div class="footer-logo">
+                        <img src="../img/logo-white.svg" alt="CryptoInvest Logo">
+                        <span>CryptoInvest</span>
+                    </div>
+                    <p class="footer-about">A CryptoInvest é uma plataforma completa para investimentos em criptomoedas, oferecendo as melhores ferramentas e recursos para investidores iniciantes e experientes.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="market.html" class="footer-link">Mercado</a></li>
+                        <li><a href="about.html" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="contact.html" class="footer-link">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Academia</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Suporte</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Termos de Uso</a></li>
+                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Segurança</a></li>
+                        <li><a href="#" class="footer-link">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CryptoInvest. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/market.js"></script>
+</body>
+</html>
+

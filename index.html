@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoInvest | Plataforma de Investimentos em Criptomoedas</title>
+    <meta name="description" content="Invista em criptomoedas de forma segura e inteligente com a CryptoInvest. Acompanhe o mercado em tempo real e tome decisões informadas.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="CryptoInvest Logo">
+                <span>CryptoInvest</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="pages/market.html" class="nav-link">Mercado</a></li>
+                    <li class="nav-item"><a href="pages/about.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <a href="pages/login.html" class="btn btn-secondary">Login</a>
+                    <a href="pages/register.html" class="btn btn-primary">Cadastre-se</a>
+                </div>
+                
+                <button class="theme-toggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Invista em criptomoedas com segurança e inteligência</h1>
+                    <p class="hero-subtitle">Acompanhe o mercado em tempo real, analise tendências e tome decisões informadas para maximizar seus investimentos.</p>
+                    <div class="hero-buttons">
+                        <a href="pages/register.html" class="btn btn-lg btn-secondary">Comece Agora</a>
+                        <a href="#featured" class="btn btn-lg btn-tertiary">Ver Mercado</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="section featured">
+            <div class="container">
+                <h2 class="section-title">Criptomoedas em Destaque</h2>
+                <p class="section-subtitle">Conheça as moedas mais populares do mercado</p>
+                
+                <div class="crypto-grid">
+                    <div class="crypto-card">
+                        <div class="crypto-icon">
+                            <img src="img/coins/bitcoin.svg" alt="Bitcoin">
+                        </div>
+                        <div class="crypto-info">
+                            <h3 class="crypto-name">Bitcoin</h3>
+                            <div class="crypto-symbol">BTC</div>
+                            <div class="crypto-price">$42,850.75</div>
+                        </div>
+                        <div class="crypto-stats">
+                            <div class="crypto-change positive">+2.4%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-card">
+                        <div class="crypto-icon">
+                            <img src="img/coins/ethereum.svg" alt="Ethereum">
+                        </div>
+                        <div class="crypto-info">
+                            <h3 class="crypto-name">Ethereum</h3>
+                            <div class="crypto-symbol">ETH</div>
+                            <div class="crypto-price">$3,285.42</div>
+                        </div>
+                        <div class="crypto-stats">
+                            <div class="crypto-change positive">+5.1%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-card">
+                        <div class="crypto-icon">
+                            <img src="img/coins/cardano.svg" alt="Cardano">
+                        </div>
+                        <div class="crypto-info">
+                            <h3 class="crypto-name">Cardano</h3>
+                            <div class="crypto-symbol">ADA</div>
+                            <div class="crypto-price">$1.24</div>
+                        </div>
+                        <div class="crypto-stats">
+                            <div class="crypto-change negative">-0.8%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-card">
+                        <div class="crypto-icon">
+                            <img src="img/coins/solana.svg" alt="Solana">
+                        </div>
+                        <div class="crypto-info">
+                            <h3 class="crypto-name">Solana</h3>
+                            <div class="crypto-symbol">SOL</div>
+                            <div class="crypto-price">$105.78</div>
+                        </div>
+                        <div class="crypto-stats">
+                            <div class="crypto-change positive">+8.3%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured-cta">
+                    <a href="pages/market.html" class="btn btn-primary">Ver Todas as Moedas</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section market-trends">
+            <div class="container">
+                <h2 class="section-title">Tendências do Mercado</h2>
+                <p class="section-subtitle">Acompanhe a evolução do mercado de criptomoedas</p>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">Capitalização de Mercado Global</div>
+                        <div class="chart-period">
+                            <button class="chart-period-btn active">1D</button>
+                            <button class="chart-period-btn">1S</button>
+                            <button class="chart-period-btn">1M</button>
+                            <button class="chart-period-btn">3M</button>
+                            <button class="chart-period-btn">1A</button>
+                            <button class="chart-period-btn">Tudo</button>
+                        </div>
+                    </div>
+                    <canvas id="marketChart"></canvas>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <div class="stats-title">Capitalização Total</div>
+                        <div class="stats-value">$1.85T</div>
+                        <div class="stats-change positive">
+                            <i class="fas fa-arrow-up"></i> 3.2% (24h)
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <div class="stats-title">Volume 24h</div>
+                        <div class="stats-value">$92.4B</div>
+                        <div class="stats-change positive">
+                            <i class="fas fa-arrow-up"></i> 5.7% (24h)
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <div class="stats-title">Dominância BTC</div>
+                        <div class="stats-value">42.3%</div>
+                        <div class="stats-change negative">
+                            <i class="fas fa-arrow-down"></i> 0.5% (24h)
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <div class="stats-title">Moedas Ativas</div>
+                        <div class="stats-value">12,482</div>
+                        <div class="stats-change positive">
+                            <i class="fas fa-arrow-up"></i> 24 (24h)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section features-section">
+            <div class="container">
+                <h2 class="section-title">Por que escolher a CryptoInvest?</h2>
+                <p class="section-subtitle">Vantagens exclusivas para seus investimentos</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Segurança Garantida</h3>
+                        <p class="feature-description">Seus investimentos protegidos com a mais avançada tecnologia de segurança do mercado.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">Análises em Tempo Real</h3>
+                        <p class="feature-description">Acompanhe o mercado com dados atualizados e tome decisões baseadas em informações precisas.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="feature-title">Carteira Multi-moedas</h3>
+                        <p class="feature-description">Gerencie todas as suas criptomoedas em um só lugar com nossa carteira integrada.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="feature-title">Taxas Competitivas</h3>
+                        <p class="feature-description">Aproveite as menores taxas do mercado para maximizar seus lucros em cada operação.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Suporte 24/7</h3>
+                        <p class="feature-description">Nossa equipe está sempre disponível para ajudar com qualquer dúvida ou problema.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="feature-title">Academia de Investimentos</h3>
+                        <p class="feature-description">Aprenda a investir com nossos cursos e materiais educativos exclusivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Pronto para começar a investir?</h2>
+                    <p class="cta-description">Crie sua conta gratuitamente e comece a investir em criptomoedas em menos de 5 minutos.</p>
+                    <div class="cta-buttons">
+                        <a href="pages/register.html" class="btn btn-lg btn-primary">Criar Conta Grátis</a>
+                        <a href="pages/about.html" class="btn btn-lg btn-secondary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about-col">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.svg" alt="CryptoInvest Logo">
+                        <span>CryptoInvest</span>
+                    </div>
+                    <p class="footer-about">A CryptoInvest é uma plataforma completa para investimentos em criptomoedas, oferecendo as melhores ferramentas e recursos para investidores iniciantes e experientes.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="pages/market.html" class="footer-link">Mercado</a></li>
+                        <li><a href="pages/about.html" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="pages/contact.html" class="footer-link">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Academia</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Suporte</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Termos de Uso</a></li>
+                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Segurança</a></li>
+                        <li><a href="#" class="footer-link">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CryptoInvest. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
+
